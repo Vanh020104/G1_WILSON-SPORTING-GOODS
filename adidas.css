@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* chung  */
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.app {
+    border: 1px solid #ececec;
+    box-shadow: 1px 1px 1px rgb(240, 237, 237);
+    width: 100%;
+    height: 150px;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    padding: 35px 90px;
+
+}
+
+.container__top {
+    padding-left: 80px;
+    width: 300px;
+    height: 50px;
+    color: rgb(73, 73, 252);
+    margin-right: 50px;
+}
+
+.icon__search {
+    color: #5b5b5b;
+    font-size: 25px;
+    position: relative;
+    left: 40px;
+    top: 12px;
+}
+
+.container__search{
+    width: 600px;
+    height: 45px;
+    border: 2px solid #5b5b5b;
+    border-radius: 50px;
+    padding: 0 50px;
+    font-size: 16px;
+    margin-right: 80px;
+}
+
+.container__all {
+    display: flex;
+    margin-top: 20px;
+}
+
+.container__login,
+.container__signin {
+    display: flex;
+    text-decoration: none;
+    color: #3a3939;
+    font-size: 18px;
+}
+
+.container__login:hover,
+.container__signin:hover {
+    color: blue;
+}
+
+.container__border {
+    border: 1px solid #5b5b5b;
+    height: 20px;
+    background: #5b5b5b;
+    margin: 0 20px;
+}
+
+.icon__cart {
+    color: #3a3939;
+    font-size: 40px;
+    margin:4px 30px;
+    color: rgb(73, 73, 252);
+}
+
+.app__importer {
+    text-align: center;
+    display: flex;
+    margin: 0 30%;
+    z-index: 1;
+    
+}
+
+.imformation {
+    text-decoration: none;
+    color: #121112;
+    font-size: 18px;
+    margin: 0 40px;
+    position: relative;
+}
+
+.imformation:hover {
+    color: rgb(73, 73, 252);
+}
+
+/* .app__hearder {
+    position: fixed;
+    border: 1px solid #ececec ;
+    width: 100%;
+    height: 700px;
+    background-image: url('https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/310067724_1246345026146912_8446569416047287781_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=BQ8ZI0MqXoEAX_4GuHa&_nc_ht=scontent.fhan14-2.fna&oh=03_AdRnBOja0tJs8eaewZZW5nxymjWGZFyrGxjwBWfSOKWIFA&oe=64016F8E');
+    background-size:cover;
+}   */
+
+/* Font Đăng ký, đăng nhập */
+
+.modal__bigall {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+    background-color: white;
+    margin: auto;
+    position: relative;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+/* Font Đăng nhập  */
+
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    width: 500px;
+    border-radius: 5px;
+    animation: growth linear 0.3s;
+    --growth-from:0.7;
+    --growth-:1;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+form div input{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+form div{
+    position: relative;
+    margin-bottom: 15px;
+}
+input:focus{
+    border: 2px solid rgb(73, 73, 252);
+}
+
+/* Style for icons */
+form div i{
+    position: absolute;
+    padding: 10px;
+}
+.failure-icon,
+.bug-icon,
+.error,
+.error_seconr {
+    color: red;
+}
+
+.success-icon,
+.good-icon {
+    color: green;
+}
+.error,
+.error_seconr {
+    font-size: 14.5px;
+    margin-top: 5px;
+}
+.success-icon,
+.failure-icon,
+.bug-icon,
+.good-icon {
+    right: 0;
+    opacity: 0;
+}
+.button__signin:hover,
+.button__signup:hover{
+    opacity: 0.8;
+}
+
+.button__signin {
+    margin-bottom:10px ;
+}
+
+.button__signin,
+.button__signup {
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgb(73, 73, 252);
+    height: 45px;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(73, 73, 252);
+    transition: all 0.1s ease ;
+}
+
+.border__or-all {
+    display: flex;
+    margin: 20px 14px 15px 14px;
+    line-height: 0;
+}
+
+.border__or {
+    border: 1px solid #dedede;
+    background-color: #c1bdbd;
+    border-radius: 3px;
+    height: 1px;
+    width: 100%;
+}
+
+.write_center {
+    margin: 0 10px;
+    color: #c1bdbd;
+}
+
+.button__facebook-items {
+    text-decoration: none;
+
+}
+
+.button__facebook {
+    height: 45px;
+    border: 1px solid rgb(70, 70, 211);
+    border-radius: 8px;
+    background-color: rgb(73, 73, 227);
+    text-align: center;
+}
+
+.button__facebook:hover {
+    background-color: rgb(51, 51, 208);
+}
+
+.icon__facebook {
+    font-size: 30px;
+    color: white;
+    padding: 6px;
+}
+
+.button__facebook-logo {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding-bottom: 10px;
+    margin: 0 10px;
+    
+}
+/*phụ kiện mũ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;500;700&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #111;
+    line-height: 1.15;
+
+}
+#wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.headline{
+    text-align: center;
+    margin: 40px 0px;
+}
+.khung-item{
+    font-size: 18px;
+    color: #111;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid #bebebe;
+    display: inline-block;
+    color: #555;
+    font-weight: 600;
+    border-radius: 4px;
+}
+ul.products{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul.products li{
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px ;
+}
+ul.products li img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+/* mua ngay*/
+ul.products li .product-top{
+    position: relative;
+    overflow: hidden;
+
+}
+ul.products li .product-top .product-thumb{
+    display: block;
+}
+ul.products li:hover .product-top .product-thumb img{
+    filter: opacity(80%);
+}
+ul.products li .product-top .product-thumb img{
+    display: block;
+}
+ul.products li .product-top a.buy-now{
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: #446084;
+    color: #fff;
+    padding: 10px 0px;
+    position: absolute;
+    bottom: -38px;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    opacity: 0.85;
+}
+ul.products li:hover a.buy-now{
+    bottom: 0px;
+}
+ul.products li .product-info{
+    padding: 10px 0px;
+
+}
+ul.products li .product-info a{
+    display: block;
+    text-decoration: none;
+}
+ul.products li .product-info a.product-cat{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #9e9e9e;
+    padding: 3px 0px;
+}
+ul.products li .product-info a.product-name{
+    color: #334862;
+    padding: 3px 0px;
+}
+ul.products li .product-info .product-price{
+    color: #111;
+    padding: 2px 0px;
+    font-weight: 600;
+}
